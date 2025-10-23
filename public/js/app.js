@@ -8,7 +8,7 @@ function getConfig() {
     return {
         maxProblemsForScore: 7,
         maxAttemptsPerProblem: 5,
-        FallPenalty: 10,
+        fallPenalty: 10,
         levels: [
             {
                 v: 0,
@@ -60,30 +60,20 @@ function getConfig() {
 }
 
 function showResults() {
-    let totalProblemsFinished = 0;
-    for (let i = 0; i < problems.length; i++) {
-        const p = problems[i];
-        if (p.successfulAttempt > 0) {
-            totalProblemsFinished++;
-        }
-    }
+    const solvedProblems = [...problems].filter(p => p.successfulAttempt > 0);
     const problemsElm = document.getElementById('problems-value');
-    problemsElm.textContent = totalProblemsFinished.toString();
+    problemsElm.textContent = solvedProblems.length.toString();
 
-    let score = 0;
-    let problemsForScoreCount = 0;
+    solvedProblems.sort((a, b) => {
+        if (a.score !== b.score) {
+            return b.score - a.score;
+        }
+        return b.number - a.number;
+    });
+
     const config = getConfig();
-    for (let i = problems.length - 1; i >= 0; i--) {
-        if (problemsForScoreCount >= config.maxProblemsForScore) {
-            break;
-        }
-        const p = problems[i];
-        if (p.successfulAttempt > 0) {
-            const pScore = p.level.points - (config.FallPenalty * (p.successfulAttempt - 1));
-            score += pScore;
-            problemsForScoreCount++;
-        }
-    }
+    const bestProblems = solvedProblems.slice(0, config.maxProblemsForScore);
+    const score = bestProblems.reduce((sum, item) => sum + item.score, 0);
     const scoreElm = document.getElementById('score-value');
     scoreElm.textContent = score.toString();
 }
@@ -100,8 +90,10 @@ function handleClickAttemptButton(event) {
     const p = problems.find(p => p.number === problemNumber);
     if (p.successfulAttempt === attemptNumber) {
         p.successfulAttempt = 0;
+        p.score = 0;
     } else {
         p.successfulAttempt = attemptNumber;
+        p.score = p.level.points - (config.fallPenalty * (attemptNumber - 1));
         for (let i = 1; i <= config.maxAttemptsPerProblem; i++) {
             const btn = document.getElementById(`btn-${problemNumber}-${i}`)
             if (i < attemptNumber) {
@@ -125,6 +117,7 @@ function displayProblems() {
                 number: p,
                 level: l,
                 successfulAttempt: 0,
+                score: 0,
             });
 
             const lineElm = document.createElement('div');
