@@ -99,7 +99,6 @@ main {
     gap: 8px;
 }
 .results-label {
-
 }
 .results-value {
     color: #00ff00;
@@ -107,7 +106,6 @@ main {
     font-weight: 500;
 }
 .score-info {
-
 }
 
 .problems-section {
@@ -142,10 +140,6 @@ main {
 }
 .problem-attempt-btn.success {
     background-color: #00ff00;
-    color: #000;
-}
-.problem-attempt-btn.failure {
-    background-color: #990000;
     color: #000;
 }
 

@@ -88,7 +88,6 @@ function handleClickAttemptButton(event) {
     for (let i = 1; i <= config.maxAttemptsPerProblem; i++) {
         const btn = document.getElementById(`btn-${problemNumber}-${i}`)
         btn.classList.toggle('success', false);
-        btn.classList.toggle('failure', false);
     }
     const p = problems.find(p => p.number === problemNumber);
     if (p.successfulAttempt === attemptNumber) {
@@ -97,16 +96,8 @@ function handleClickAttemptButton(event) {
     } else {
         p.successfulAttempt = attemptNumber;
         p.score = p.level.points - (config.fallPenalty * (attemptNumber - 1));
-        for (let i = 1; i <= config.maxAttemptsPerProblem; i++) {
-            const btn = document.getElementById(`btn-${problemNumber}-${i}`)
-            if (i < attemptNumber) {
-                btn.classList.toggle('failure', true);
-            } else if (i === attemptNumber) {
-                btn.classList.toggle('success', true);
-            } else {
-                break;
-            }
-        }
+        const btn = document.getElementById(`btn-${problemNumber}-${attemptNumber}`)
+        btn.classList.toggle('success', true);
     }
     showResults();
 }
