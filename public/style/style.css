@@ -95,6 +95,7 @@ main {
 }
 .results-info {
     display: flex;
+    align-items: center;
     gap: 8px;
 }
 .results-label {
