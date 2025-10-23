@@ -132,6 +132,7 @@ main {
 
 .problem-attempt-btn {
     width: 32px;
+    border-radius: 2px;
     background-color: var(--bg-primary);
     color: #fff;
     font-family: var(--font-mono), monospace;
