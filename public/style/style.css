@@ -91,13 +91,15 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    font-size: 18px;
+    font-size: 14px;
 }
 .results-info {
     display: flex;
     gap: 8px;
 }
-.results-label {}
+.results-label {
+
+}
 .results-value {
     color: #00ff00;
     font-size: 18px;
