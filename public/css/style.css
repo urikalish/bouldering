@@ -154,8 +154,8 @@ main {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto 1fr;
     gap: 16px;
-    margin-top: 1px;
     border-left: 8px solid var(--level-bg-color);
+    border-top: 1px solid #bbb;
     padding: 6px;
     background-color: var(--color-bg-elevation);
 }
@@ -166,8 +166,8 @@ main {
     width: 28px;
     height: 28px;
     border-radius: 2px;
-    background-color: #fff;
-    color: #000;
+    background-color: #eee;
+    color: #222;
     font-weight: 500;
 }
 
@@ -178,7 +178,7 @@ main {
     height: 28px;
     border: 1px solid transparent;
     border-radius: 2px;
-    color: #666;
+    color: #444;
     font-family: var(--font-mono), monospace;
     outline: none !important;
     user-select: none;
@@ -189,7 +189,7 @@ main {
     transition: all ease 200ms;
 }
 .problem-attempt.success {
-    border-color: var(--color-bg-primary);
+    border-color: #222;
     background-color: var(--color-accent);
     color: #000;
     font-weight: 500;
