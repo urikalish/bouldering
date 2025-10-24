@@ -12,6 +12,7 @@
     --bg-secondary: #444444;
     --text-primary: #dddddd;
     --text-secondary: #bbbbbb;
+    --color-accent: #ccff00;
 
     --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
     --font-mono: "Roboto Mono", monospace;
@@ -100,7 +101,7 @@ main {
 .results-label {
 }
 .results-value {
-    color: #00ff00;
+    color: var(--color-accent);
     font-size: 18px;
     font-weight: 500;
 }
@@ -178,7 +179,7 @@ main {
     user-select: none;
 }
 .problem-attempt-btn.success {
-    background-color: #00ff00;
+    background-color: var(--color-accent);
     color: #000;
 }
 
