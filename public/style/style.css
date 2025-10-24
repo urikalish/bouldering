@@ -8,9 +8,10 @@
 
 /* CSS Custom Properties for Dark Theme */
 :root {
-    --color-bg-primary: #222222;
-    --color-bg-elevation: #444444;
-    --color-text-primary: #dddddd;
+    --color-bg-primary: #222;
+    --color-bg-elevation: #ddd;
+    --color-text-primary: #ddd;
+    --color-text-secondary: #000;
     --color-accent: #ccff00;
 
     --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
@@ -185,7 +186,7 @@ main {
 
 .problem-level {
     justify-self: end;
-    border: 1px solid #fff;
+    border: 1px solid #000;
     border-radius: 50%;
     background-color: var(--level-bg-color);
     color: var(--level-color);
