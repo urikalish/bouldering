@@ -136,6 +136,7 @@ function displayProblems() {
                 attemptElm.classList.add('problem-attempt');
                 attemptElm.dataset.problem = p.toString();
                 attemptElm.dataset.attempt = a.toString();
+                attemptElm.dataset.text = a === 1 ? 'F' : a.toString();
                 attemptElm.addEventListener('click', handleClickAttempt);
 
                 const attemptSuccessElm = document.createElement('div');

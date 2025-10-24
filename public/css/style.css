@@ -216,11 +216,11 @@ main {
     filter: grayscale(1);
 }
 .problem-attempt:not(.success)::after {
-    content: attr(data-attempt);
+    content: attr(data-text);
     position: relative;
 }
 .problem-attempt.success::after {
-    content: attr(data-attempt);
+    content: attr(data-text);
     position: relative;
     color: #000;
     font-size: 13px;
