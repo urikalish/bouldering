@@ -74,7 +74,7 @@ function showResults() {
     scoreElm.textContent = score.toString();
 }
 
-function handleClickAttemptButton(event) {
+function handleClickAttempt(event) {
     if ('vibrate' in navigator) {
         navigator.vibrate(15);
     }
@@ -117,14 +117,14 @@ function displayProblems() {
             lineElm.appendChild(problemNumberElm);
 
             for (let a = 1; a <= config.maxAttemptsPerProblem; a++) {
-                const attemptBtnElm = document.createElement('button');
-                attemptBtnElm.id = `btn-${p}-${a}`;
-                attemptBtnElm.textContent = `${a}`;
-                attemptBtnElm.classList.add('problem-attempt-btn');
-                attemptBtnElm.dataset.problem = p.toString();
-                attemptBtnElm.dataset.attempt = a.toString();
-                attemptBtnElm.addEventListener('click', handleClickAttemptButton);
-                lineElm.appendChild(attemptBtnElm);
+                const attemptElm = document.createElement('div');
+                attemptElm.id = `btn-${p}-${a}`;
+                attemptElm.textContent = `${a}`;
+                attemptElm.classList.add('problem-attempt');
+                attemptElm.dataset.problem = p.toString();
+                attemptElm.dataset.attempt = a.toString();
+                attemptElm.addEventListener('click', handleClickAttempt);
+                lineElm.appendChild(attemptElm);
             }
 
             const problemLevelElm = document.createElement('div');

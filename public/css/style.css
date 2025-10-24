@@ -161,26 +161,33 @@ main {
 }
 
 .problem-number {
+    display: grid;
+    place-content: center;
+    width: 28px;
+    height: 28px;
     border-radius: 2px;
     background-color: #fff;
     color: #000;
-    padding: 2px 4px;
     font-weight: 500;
 }
 
-.problem-attempt-btn {
+.problem-attempt {
+    display: grid;
+    place-content: center;
     width: 32px;
-    border-color: transparent;
+    height: 28px;
+    border: 1px solid transparent;
     border-radius: 2px;
     color: #000;
     font-family: var(--font-mono), monospace;
+    font-size: 12px;
     outline: none !important;
     user-select: none;
     cursor: pointer;
     background-color: transparent;
     font-weight: 400;
 }
-.problem-attempt-btn.success {
+.problem-attempt.success {
     border-color: var(--color-bg-primary);
     background-color: var(--color-accent);
     font-weight: 500;
@@ -188,6 +195,8 @@ main {
 
 .problem-level {
     justify-self: end;
+    width: 28px;
+    height: 28px;
     border: 1px solid #000;
     border-radius: 50%;
     background-color: var(--level-bg-color);
