@@ -113,6 +113,43 @@ main {
     font-family: var(--font-mono), monospace;
 }
 
+.v0 {
+    --level-bg-color: hsl(180, 50%, 60%);
+    --level-color: #000;
+}
+.v1 {
+    --level-bg-color: hsl(120, 60%, 50%);
+    --level-color: #000;
+}
+.v2 {
+    --level-bg-color: hsl(60, 60%, 50%);
+    --level-color: #000;
+}
+.v3 {
+    --level-bg-color: hsl(20, 60%, 50%);
+    --level-color: #000;
+}
+.v4 {
+    --level-bg-color: hsl(0, 60%, 50%);
+    --level-color: #fff;
+}
+.v5 {
+    --level-bg-color: hsl(300, 60%, 50%);
+    --level-color: #fff;
+}
+.v6 {
+    --level-bg-color: hsl(260, 60%, 50%);
+    --level-color: #fff;
+}
+.v7 {
+    --level-bg-color: hsl(240, 60%, 50%);
+    --level-color: #fff;
+}
+.v8 {
+    --level-bg-color: hsl(0, 0%, 0%);
+    --level-color: #fff;
+}
+
 .problem-line {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto 1fr;
@@ -144,43 +181,6 @@ main {
 .problem-attempt-btn.success {
     background-color: #00ff00;
     color: #000;
-}
-
-.v0 {
-    --level-bg-color: #66cccc;
-    --level-color: #000;
-}
-.v1 {
-    --level-bg-color: #33cc33;
-    --level-color: #000;
-}
-.v2 {
-    --level-bg-color: #cccc33;
-    --level-color: #000;
-}
-.v3 {
-    --level-bg-color: #cc6633;
-    --level-color: #000;
-}
-.v4 {
-    --level-bg-color: #cc3333;
-    --level-color: #fff;
-}
-.v5 {
-    --level-bg-color: #cc33cc;
-    --level-color: #fff;
-}
-.v6 {
-    --level-bg-color: #6633cc;
-    --level-color: #fff;
-}
-.v7 {
-    --level-bg-color: #3333cc;
-    --level-color: #fff;
-}
-.v8 {
-    --level-bg-color: #000000;
-    --level-color: #fff;
 }
 
 .problem-level {
