@@ -115,39 +115,39 @@ main {
 }
 
 .v0 {
-    --level-bg-color: hsl(180, 60%, 50%);
+    --level-bg-color: hsl(180, 50%, 50%);
     --level-color: #000;
 }
 .v1 {
-    --level-bg-color: hsl(120, 60%, 50%);
+    --level-bg-color: hsl(120, 50%, 50%);
     --level-color: #000;
 }
 .v2 {
-    --level-bg-color: hsl(60, 60%, 50%);
+    --level-bg-color: hsl(60, 50%, 50%);
     --level-color: #000;
 }
 .v3 {
-    --level-bg-color: hsl(30, 60%, 50%);
+    --level-bg-color: hsl(30, 50%, 50%);
     --level-color: #000;
 }
 .v4 {
-    --level-bg-color: hsl(0, 60%, 50%);
+    --level-bg-color: hsl(0, 50%, 50%);
     --level-color: #fff;
 }
 .v5 {
-    --level-bg-color: hsl(300, 60%, 50%);
+    --level-bg-color: hsl(300, 50%, 50%);
     --level-color: #fff;
 }
 .v6 {
-    --level-bg-color: hsl(270, 60%, 50%);
+    --level-bg-color: hsl(270, 50%, 50%);
     --level-color: #fff;
 }
 .v7 {
-    --level-bg-color: hsl(240, 60%, 50%);
+    --level-bg-color: hsl(240, 50%, 50%);
     --level-color: #fff;
 }
 .v8 {
-    --level-bg-color: hsl(0, 0%, 0%);
+    --level-bg-color: hsl(0, 50%, 0%);
     --level-color: #fff;
 }
 
