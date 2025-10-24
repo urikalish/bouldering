@@ -126,7 +126,7 @@ function displayProblems() {
 
                 const attemptSuccessElm = document.createElement('div');
                 attemptSuccessElm.classList.add('problem-attempt-success');
-                attemptSuccessElm.style.transform = `rotate(${Math.floor(Math.random()*360)}deg)`;
+                attemptSuccessElm.style.transform = `rotate(${Math.floor(Math.random()*90 - 45)}deg)`;
                 attemptElm.appendChild(attemptSuccessElm);
 
                 lineElm.appendChild(attemptElm);
