@@ -114,40 +114,40 @@ main {
 }
 
 .v0 {
-    --level-bg-color: hsl(180, 50%, 50%);
-    --level-color: #fff;
+    --color-level-tag: hsl(180, 50%, 50%);
+    --color-level-wall: #ddd;
 }
 .v1 {
-    --level-bg-color: hsl(120, 50%, 50%);
-    --level-color: #fff;
+    --color-level-tag: hsl(120, 50%, 50%);
+    --color-level-wall: #ccc;
 }
 .v2 {
-    --level-bg-color: hsl(60, 50%, 50%);
-    --level-color: #fff;
+    --color-level-tag: hsl(60, 50%, 50%);
+    --color-level-wall: #ddd;
 }
 .v3 {
-    --level-bg-color: hsl(30, 50%, 50%);
-    --level-color: #fff;
+    --color-level-tag: hsl(30, 50%, 50%);
+    --color-level-wall: #ccc;
 }
 .v4 {
-    --level-bg-color: hsl(0, 50%, 50%);
-    --level-color: #fff;
+    --color-level-tag: hsl(0, 50%, 50%);
+    --color-level-wall: #ddd;
 }
 .v5 {
-    --level-bg-color: hsl(300, 50%, 50%);
-    --level-color: #fff;
+    --color-level-tag: hsl(300, 50%, 50%);
+    --color-level-wall: #ccc;
 }
 .v6 {
-    --level-bg-color: hsl(270, 50%, 50%);
-    --level-color: #fff;
+    --color-level-tag: hsl(270, 50%, 50%);
+    --color-level-wall: #ddd;
 }
 .v7 {
-    --level-bg-color: hsl(240, 50%, 50%);
-    --level-color: #fff;
+    --color-level-tag: hsl(240, 50%, 50%);
+    --color-level-wall: #ccc;
 }
 .v8 {
-    --level-bg-color: hsl(0, 50%, 0%);
-    --level-color: #fff;
+    --color-level-tag: hsl(0, 50%, 0%);
+    --color-level-wall: #ddd;
 }
 
 .problem-identifier {
@@ -161,7 +161,7 @@ main {
     gap: 16px;
     border-top: 1px solid #bbb;
     padding: 6px;
-    background-color: var(--color-bg-elevation);
+    background-color: var(--color-level-wall);
 }
 
 .problem-level {
@@ -169,8 +169,8 @@ main {
     place-content: center right;
     width: 32px;
     height: 16px;
-    background-color: var(--level-bg-color);
-    color: var(--level-color);
+    background-color: var(--color-level-tag);
+    color: #fff;
     padding-right: 3px;
     font-size: 11px;
     font-weight: 500;
@@ -183,8 +183,8 @@ main {
     width: 32px;
     height: 32px;
     border-radius: 2px;
-    background-color: #eee;
-    color: #222;
+    background-color: #fff;
+    color: #333;
     font-weight: 500;
 }
 
