@@ -115,19 +115,19 @@ main {
 
 .v0 {
     --level-bg-color: hsl(180, 50%, 50%);
-    --level-color: #000;
+    --level-color: #fff;
 }
 .v1 {
     --level-bg-color: hsl(120, 50%, 50%);
-    --level-color: #000;
+    --level-color: #fff;
 }
 .v2 {
     --level-bg-color: hsl(60, 50%, 50%);
-    --level-color: #000;
+    --level-color: #fff;
 }
 .v3 {
     --level-bg-color: hsl(30, 50%, 50%);
-    --level-color: #000;
+    --level-color: #fff;
 }
 .v4 {
     --level-bg-color: hsl(0, 50%, 50%);
