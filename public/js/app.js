@@ -75,12 +75,16 @@ function showResults() {
 }
 
 function handleClickAttempt(event) {
+    const targetElm = event.target;
+    if (!targetElm.dataset?.problem || !targetElm.dataset?.attempt) {
+        alert(targetElm.dataset.problem + ' ' + targetElm.dataset.attempt + ' ' + targetElm.className);
+        return;
+    }
     if ('vibrate' in navigator) {
         navigator.vibrate(15);
     }
-    alert(event.target.dataset.problem + ' ' + event.target.dataset.attempt + ' ' + event.target.className);
-    const problemNumber = Number(event.target.dataset.problem);
-    const attemptNumber = Number(event.target.dataset.attempt);
+    const problemNumber = Number(targetElm.dataset.problem);
+    const attemptNumber = Number(targetElm.dataset.attempt);
     for (let i = 1; i <= config.maxAttemptsPerProblem; i++) {
         const btn = document.getElementById(`btn-${problemNumber}-${i}`)
         btn.classList.toggle('success', false);
