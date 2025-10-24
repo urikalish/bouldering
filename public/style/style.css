@@ -12,7 +12,6 @@
     --bg-secondary: #444444;
     --text-primary: #dddddd;
     --text-secondary: #bbbbbb;
-    --accent: #339999;
 
     --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
     --font-mono: "Roboto Mono", monospace;
@@ -114,7 +113,7 @@ main {
 }
 
 .v0 {
-    --level-bg-color: hsl(180, 50%, 60%);
+    --level-bg-color: hsl(180, 60%, 50%);
     --level-color: #000;
 }
 .v1 {
