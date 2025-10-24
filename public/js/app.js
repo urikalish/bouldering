@@ -75,9 +75,9 @@ function showResults() {
 }
 
 function handleClickAttempt(event) {
-    if ('vibrate' in navigator) {
-        navigator.vibrate(15);
-    }
+    // if ('vibrate' in navigator) {
+    //     navigator.vibrate(15);
+    // }
     const problemNumber = Number(event.target.dataset.problem);
     const attemptNumber = Number(event.target.dataset.attempt);
     for (let i = 1; i <= config.maxAttemptsPerProblem; i++) {
