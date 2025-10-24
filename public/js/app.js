@@ -124,6 +124,7 @@ function displayProblems() {
 
             for (let a = 1; a <= config.maxAttemptsPerProblem; a++) {
                 const attemptBtnElm = document.createElement('button');
+                attemptBtnElm.id = `btn-${p}-${a}`;
                 attemptBtnElm.textContent = `${a}`;
                 attemptBtnElm.classList.add('problem-attempt-btn');
                 attemptBtnElm.dataset.problem = p.toString();
