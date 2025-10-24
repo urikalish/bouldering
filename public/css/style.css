@@ -170,6 +170,7 @@ main {
     place-content: center;
     width: 32px;
     height: 16px;
+    border-radius: 2px;
     background-color: var(--level-bg-color);
     color: var(--level-color);
     font-size: 11px;
@@ -181,6 +182,7 @@ main {
     place-content: center;
     width: 32px;
     height: 32px;
+    border-radius: 2px;
     background-color: #eee;
     color: #222;
     font-weight: 500;
