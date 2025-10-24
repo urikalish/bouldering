@@ -2,7 +2,7 @@
 'use strict';
 
 const config = {
-    maxProblemsForScore: 7,
+    numOfScoredProblems: 7,
     maxAttemptsPerProblem: 5,
     fallPenalty: 10,
     levels: [
@@ -68,7 +68,7 @@ function showResults() {
         return b.number - a.number;
     });
 
-    const bestProblems = solvedProblems.slice(0, config.maxProblemsForScore);
+    const bestProblems = solvedProblems.slice(0, config.numOfScoredProblems);
     const score = bestProblems.reduce((sum, item) => sum + item.score, 0);
     const scoreElm = document.getElementById('score-value');
     scoreElm.textContent = score.toString();
