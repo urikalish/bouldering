@@ -75,9 +75,8 @@ function showResults() {
 }
 
 function handleClickAttempt(event) {
-    const targetElm = event.target;
+    const targetElm = event.currentTarget;
     if (!targetElm.dataset?.problem || !targetElm.dataset?.attempt) {
-        alert(targetElm.dataset.problem + ' ' + targetElm.dataset.attempt + ' ' + targetElm.className);
         return;
     }
     if ('vibrate' in navigator) {
