@@ -172,6 +172,7 @@ main {
 }
 
 .problem-attempt {
+    position: relative;
     display: grid;
     place-content: center;
     width: 32px;
@@ -185,11 +186,27 @@ main {
     font-size: 11px;
     font-weight: 400;
 }
-.problem-attempt.success {
-    color: #000;
-    font-weight: 700;
-    background: url("../img/hold1.svg") no-repeat center;
+.problem-attempt-success {
+    display: none;
+}
+.problem-attempt.success .problem-attempt-success {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: url("../img/hold.svg") no-repeat center;
     background-size: 32px 32px;
+    filter: grayscale(1);
+}
+.problem-attempt:not(.success)::after {
+    content: attr(data-attempt);
+    position: relative;
+}
+.problem-attempt.success::after {
+    content: attr(data-attempt);
+    position: relative;
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .problem-level {

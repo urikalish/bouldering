@@ -119,11 +119,16 @@ function displayProblems() {
             for (let a = 1; a <= config.maxAttemptsPerProblem; a++) {
                 const attemptElm = document.createElement('div');
                 attemptElm.id = `btn-${p}-${a}`;
-                attemptElm.textContent = `${a}`;
                 attemptElm.classList.add('problem-attempt');
                 attemptElm.dataset.problem = p.toString();
                 attemptElm.dataset.attempt = a.toString();
                 attemptElm.addEventListener('click', handleClickAttempt);
+
+                const attemptSuccessElm = document.createElement('div');
+                attemptSuccessElm.classList.add('problem-attempt-success');
+                attemptSuccessElm.style.transform = `rotate(${Math.floor(Math.random()*360)}deg)`;
+                attemptElm.appendChild(attemptSuccessElm);
+
                 lineElm.appendChild(attemptElm);
             }
 
