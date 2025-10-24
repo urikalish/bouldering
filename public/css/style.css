@@ -155,7 +155,6 @@ main {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto 1fr;
     gap: 16px;
-    border-left: 8px solid var(--level-bg-color);
     border-top: 1px solid #bbb;
     padding: 6px;
     background-color: var(--color-bg-elevation);
@@ -164,8 +163,9 @@ main {
 .problem-number {
     display: grid;
     place-content: center;
-    width: 32px;
+    width: 40px;
     height: 32px;
+    border-left: 8px solid var(--level-bg-color);
     border-radius: 2px;
     background-color: #eee;
     color: #222;
