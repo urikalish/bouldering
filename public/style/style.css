@@ -8,7 +8,7 @@
 
 /* CSS Custom Properties for Dark Theme */
 :root {
-    --color-bg-primary: #222;
+    --color-bg-primary: #333;
     --color-bg-elevation: #ccc;
     --color-text-primary: #ddd;
     --color-text-secondary: #000;
