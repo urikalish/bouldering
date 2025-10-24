@@ -12,7 +12,7 @@
     --color-bg-elevation: #ccc;
     --color-text-primary: #ddd;
     --color-text-secondary: #000;
-    --color-accent: #ccff00;
+    --color-accent: hsl(70, 100%, 50%);
 
     --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
     --font-mono: "Roboto Mono", monospace;
@@ -170,19 +170,20 @@ main {
 
 .problem-attempt-btn {
     width: 32px;
-    border-color: var(--color-bg-primary);
+    border-color: transparent;
     border-radius: 2px;
-    background-color: var(--color-bg-primary);
-    color: #fff;
+    color: #000;
     font-family: var(--font-mono), monospace;
-    font-weight: 500;
     outline: none !important;
     user-select: none;
     cursor: pointer;
+    background-color: transparent;
+    font-weight: 400;
 }
 .problem-attempt-btn.success {
+    border-color: var(--color-bg-primary);
     background-color: var(--color-accent);
-    color: #000;
+    font-weight: 500;
 }
 
 .problem-level {
