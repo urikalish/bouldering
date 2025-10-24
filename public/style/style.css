@@ -136,6 +136,7 @@ main {
     background-color: var(--bg-primary);
     color: #fff;
     font-family: var(--font-mono), monospace;
+    font-weight: 500;
     outline: none !important;
     user-select: none;
 }
