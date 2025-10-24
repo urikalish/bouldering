@@ -1,63 +1,60 @@
 // Use strict mode for better error handling
 'use strict';
 
-const score = 0;
-const problems = [];
+const config = {
+    maxProblemsForScore: 7,
+    maxAttemptsPerProblem: 5,
+    fallPenalty: 10,
+    levels: [
+        {
+            v: 0,
+            points: 100,
+            problems: [1],
+        },
+        {
+            v: 1,
+            points: 200,
+            problems: [2, 3],
+        },
+        {
+            v: 2,
+            points: 300,
+            problems: [4, 5, 6, 7, 8],
+        },
+        {
+            v: 3,
+            points: 400,
+            problems: [9, 10, 11, 12, 13],
+        },
+        {
+            v: 4,
+            points: 500,
+            problems: [14, 15, 16, 17, 18],
+        },
+        {
+            v: 5,
+            points: 600,
+            problems: [19, 20, 21, 22, 23],
+        },
+        {
+            v: 6,
+            points: 700,
+            problems: [24, 25, 26, 27],
+        },
+        {
+            v: 7,
+            points: 800,
+            problems: [28, 29],
+        },
+        {
+            v: 8,
+            points: 900,
+            problems: [30],
+        },
+    ]
+};
 
-function getConfig() {
-    return {
-        maxProblemsForScore: 7,
-        maxAttemptsPerProblem: 5,
-        fallPenalty: 10,
-        levels: [
-            {
-                v: 0,
-                points: 100,
-                problems: [1],
-            },
-            {
-                v: 1,
-                points: 200,
-                problems: [2, 3],
-            },
-            {
-                v: 2,
-                points: 300,
-                problems: [4, 5, 6, 7, 8],
-            },
-            {
-                v: 3,
-                points: 400,
-                problems: [9, 10, 11, 12, 13],
-            },
-            {
-                v: 4,
-                points: 500,
-                problems: [14, 15, 16, 17, 18],
-            },
-            {
-                v: 5,
-                points: 600,
-                problems: [19, 20, 21, 22, 23],
-            },
-            {
-                v: 6,
-                points: 700,
-                problems: [24, 25, 26, 27],
-            },
-            {
-                v: 7,
-                points: 800,
-                problems: [28, 29],
-            },
-            {
-                v: 8,
-                points: 900,
-                problems: [30],
-            },
-        ]
-    }
-}
+const problems = [];
 
 function showResults() {
     const solvedProblems = [...problems].filter(p => p.successfulAttempt > 0);
@@ -71,7 +68,6 @@ function showResults() {
         return b.number - a.number;
     });
 
-    const config = getConfig();
     const bestProblems = solvedProblems.slice(0, config.maxProblemsForScore);
     const score = bestProblems.reduce((sum, item) => sum + item.score, 0);
     const scoreElm = document.getElementById('score-value');
@@ -84,7 +80,6 @@ function handleClickAttemptButton(event) {
     }
     const problemNumber = Number(event.target.dataset.problem);
     const attemptNumber = Number(event.target.dataset.attempt);
-    const config = getConfig();
     for (let i = 1; i <= config.maxAttemptsPerProblem; i++) {
         const btn = document.getElementById(`btn-${problemNumber}-${i}`)
         btn.classList.toggle('success', false);
@@ -104,7 +99,6 @@ function handleClickAttemptButton(event) {
 
 function displayProblems() {
     const problemsSection = document.getElementById('problems-section');
-    const config = getConfig();
     config.levels.forEach(l => {
         l.problems.forEach(p => {
             problems.push({
