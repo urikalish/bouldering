@@ -178,18 +178,20 @@ main {
     height: 28px;
     border: 1px solid transparent;
     border-radius: 2px;
-    color: #000;
+    color: #666;
     font-family: var(--font-mono), monospace;
-    font-size: 12px;
     outline: none !important;
     user-select: none;
     cursor: pointer;
     background-color: transparent;
+    font-size: 12px;
     font-weight: 400;
+    transition: all ease 200ms;
 }
 .problem-attempt.success {
     border-color: var(--color-bg-primary);
     background-color: var(--color-accent);
+    color: #000;
     font-weight: 500;
 }
 
