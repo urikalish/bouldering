@@ -184,7 +184,7 @@ main {
     height: 32px;
     border-radius: 2px;
     background-color: #fff;
-    color: #333;
+    color: #222;
     font-weight: 500;
 }
 
@@ -194,7 +194,7 @@ main {
     place-content: center;
     width: 32px;
     height: 32px;
-    color: #333;
+    color: #222;
     font-family: var(--font-mono), monospace;
     outline: none !important;
     user-select: none;
