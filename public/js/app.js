@@ -78,7 +78,7 @@ function handleClickAttempt(event) {
     if ('vibrate' in navigator) {
         navigator.vibrate(15);
     }
-    alert(event.target.className);
+    alert(event.target.dataset.problem + ' ' + event.target.dataset.attempt + ' ' + event.target.className);
     const problemNumber = Number(event.target.dataset.problem);
     const attemptNumber = Number(event.target.dataset.attempt);
     for (let i = 1; i <= config.maxAttemptsPerProblem; i++) {
