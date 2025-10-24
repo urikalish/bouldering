@@ -194,7 +194,7 @@ main {
     place-content: center;
     width: 32px;
     height: 32px;
-    color: #444;
+    color: #333;
     font-family: var(--font-mono), monospace;
     outline: none !important;
     user-select: none;
