@@ -125,7 +125,7 @@ main {
     --level-color: #000;
 }
 .v3 {
-    --level-bg-color: hsl(20, 60%, 50%);
+    --level-bg-color: hsl(30, 60%, 50%);
     --level-color: #000;
 }
 .v4 {
@@ -137,7 +137,7 @@ main {
     --level-color: #fff;
 }
 .v6 {
-    --level-bg-color: hsl(260, 60%, 50%);
+    --level-bg-color: hsl(270, 60%, 50%);
     --level-color: #fff;
 }
 .v7 {
