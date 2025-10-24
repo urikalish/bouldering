@@ -176,6 +176,7 @@ main {
     font-weight: 500;
     outline: none !important;
     user-select: none;
+    cursor: pointer;
 }
 .problem-attempt-btn.success {
     background-color: var(--color-accent);
