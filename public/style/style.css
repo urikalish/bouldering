@@ -8,10 +8,9 @@
 
 /* CSS Custom Properties for Dark Theme */
 :root {
-    --bg-primary: #222222;
-    --bg-secondary: #444444;
-    --text-primary: #dddddd;
-    --text-secondary: #bbbbbb;
+    --color-bg-primary: #222222;
+    --color-bg-elevation: #444444;
+    --color-text-primary: #dddddd;
     --color-accent: #ccff00;
 
     --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
@@ -27,8 +26,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: var(--bg-primary);
-        color: var(--text-primary);
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -57,8 +56,8 @@ body {
     min-height: -webkit-fill-available; /* iOS Safari viewport height fix */
     font-family: var(--font-family), sans-serif;
     font-weight: 400;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
     line-height: 1.5;
     overflow-x: hidden;
 
@@ -76,7 +75,7 @@ main {
 .top-section {
     position: sticky;
     top: 0;
-    background-color: var(--bg-primary);
+    background-color: var(--color-bg-primary);
     padding: 8px;
 }
 
@@ -109,7 +108,7 @@ main {
 }
 
 .problems-section {
-    background-color: var(--bg-primary);
+    background-color: var(--color-bg-primary);
     font-family: var(--font-mono), monospace;
 }
 
@@ -157,7 +156,7 @@ main {
     margin-top: 1px;
     border-left: 8px solid var(--level-bg-color);
     padding: 8px;
-    background-color: var(--bg-secondary);
+    background-color: var(--color-bg-elevation);
 }
 
 .problem-number {
@@ -171,7 +170,7 @@ main {
 .problem-attempt-btn {
     width: 32px;
     border-radius: 2px;
-    background-color: var(--bg-primary);
+    background-color: var(--color-bg-primary);
     color: #fff;
     font-family: var(--font-mono), monospace;
     font-weight: 500;
