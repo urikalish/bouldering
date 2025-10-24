@@ -73,7 +73,7 @@ main {
     min-height: -webkit-fill-available;
 }
 
-.top-section {
+.header {
     position: sticky;
     top: 0;
     z-index: 1;
@@ -225,4 +225,15 @@ main {
     color: #000;
     font-size: 13px;
     font-weight: 700;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    background-color: var(--color-bg-primary);
+    padding: 4px 6px;
+}
+
+.footer-text {
+     font-size: 13px;
 }
