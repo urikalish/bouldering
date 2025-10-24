@@ -78,9 +78,9 @@ function handleClickAttempt(event) {
     if ('vibrate' in navigator) {
         navigator.vibrate(15);
     }
+    alert(event.target.className);
     const problemNumber = Number(event.target.dataset.problem);
     const attemptNumber = Number(event.target.dataset.attempt);
-    alert(problemNumber + ' ' + attemptNumber);
     for (let i = 1; i <= config.maxAttemptsPerProblem; i++) {
         const btn = document.getElementById(`btn-${problemNumber}-${i}`)
         btn.classList.toggle('success', false);
