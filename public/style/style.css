@@ -118,6 +118,7 @@ main {
     grid-template-columns: auto auto auto auto auto auto 1fr;
     gap: 16px;
     margin-top: 1px;
+    border-left: 4px solid var(--level-bg-color);
     padding: 8px;
     background-color: var(--bg-secondary);
 }
