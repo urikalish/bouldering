@@ -111,10 +111,20 @@ function displayProblems() {
             const lineElm = document.createElement('div');
             lineElm.classList.add('problem-line', `v${l.v}`);
 
+            const problemLineIdentifierElm = document.createElement('div');
+            problemLineIdentifierElm.classList.add('problem-identifier');
+
+            const problemLevelElm = document.createElement('div');
+            problemLevelElm.textContent = `V${l.v}`;
+            problemLevelElm.classList.add('problem-level');
+            problemLineIdentifierElm.appendChild(problemLevelElm);
+
             const problemNumberElm = document.createElement('div');
             problemNumberElm.textContent = `${p < 10 ? '0' : ''}${p}`;
             problemNumberElm.classList.add('problem-number');
-            lineElm.appendChild(problemNumberElm);
+            problemLineIdentifierElm.appendChild(problemNumberElm);
+
+            lineElm.appendChild(problemLineIdentifierElm);
 
             for (let a = 1; a <= config.maxAttemptsPerProblem; a++) {
                 const attemptElm = document.createElement('div');
@@ -132,11 +142,6 @@ function displayProblems() {
 
                 lineElm.appendChild(attemptElm);
             }
-
-            const problemLevelElm = document.createElement('div');
-            problemLevelElm.textContent = `V${l.v}`;
-            problemLevelElm.classList.add('problem-level');
-            lineElm.appendChild(problemLevelElm);
 
             problemsSection.appendChild(lineElm);
         })
